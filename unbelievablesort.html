@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>I Can't Believe It Can Sort!</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<script src="https://kit.fontawesome.com/03f05a2142.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="icon" href="images/thumbs/moon.ico" type="image/x-icon">
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="#" class="image avatar"><img src="images/moon.png" alt="" /></a>
+					<h1><strong>Welcome to Yugen</strong>, a space I dedicate to<br />
+					learning new things.</h1>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2>I Can't Believe It Can Sort!</h2>
+						</header>
+						<p>The I can't believe it can sort algorithm is a very simple but inefficient algorithm. The reason that it is named so is because if you were to look at the pseudocode, you won't think that it can actually sort but it does. Here is the pseudocode:</p>
+                        <pre>
+                            <code>
+for i = 1 to n do
+    for j = 1 to n do
+        if A[i] &lt; A[j] then
+            swap A[i] and A[j]
+                            </code>
+                        </pre>
+                        <p>The pseudocode was lifted, verbatim, from the research paper &nbsp;"Is this the simplest (and most surprising) sorting
+                            algorithm ever?" by Stanley P. Y. Fung. You can find the paper <a href="https://arxiv.org/pdf/2110.01111.pdf">here</a>.</p>
+                        <p>As evidenced by the pseudocode, I Can't Believe It Can Sort is a simple and inefficient sorting algorithm that uses nested loops to repeatedly compare and swap elements until the array is sorted. This algorithm has a time complexity of O(n^2), making it much less efficient than well-known sorting algorithms like quicksort or mergesort, which have better average and worst-case performance.</p>
+                        <p>Here is a java implementation of this algorithm:</p>
+                        <pre>
+                            <code>
+import java.util.*;
+import java.lang.*;
+                                
+class ICantBelieveItCanSort{
+                                
+    public static void iCantBelieveItCanSort(int[] arr){
+                                        
+        int n = arr.length;
+        for(int i=0; i&lt;n; i++){
+            for(int j=0;j &lt;n;j++){
+                if(arr[i]&lt;arr[j]){
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+                                        
+            }
+        }
+                                
+    }
+    public static void main(String[] args){
+                                
+        int[] arr = {1,3,5,3,67,7,2,8,9,34,54,22,65,21};
+            iCantBelieveItCanSort(arr);
+            for(int i : arr)
+                System.out.print(i + " ");
+    }
+                                
+}
+                            </code>
+                        </pre>
+					</section>
+		
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://swchoubey.github.io" class="icon solid fa-globe"><span class="label">Twitter</span></a></li>
+								<li><a href="https://www.linkedin.com/in/swasti-choubey/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/swchoubey" class="icon brands fa-github"><span class="label">Github</span></a></li>
+								<li><a href="mailto:choubeyswasti@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Swasti Choubey</li></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

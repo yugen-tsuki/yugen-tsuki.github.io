@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Captcha</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<script src="https://kit.fontawesome.com/03f05a2142.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" href="images/thumbs/moon.ico" type="image/x-icon">
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="#" class="image avatar"><img src="images/moon.png" alt="" /></a>
+					<h1><strong>Welcome to Yugen</strong>, a space I dedicate to<br />
+					learning new things.</h1>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2>CAPTCHA: What is it and how does it work?</h2>
+						</header>
+						<p>The term CAPTCHA is an acronymn for Completely Automated Public Turing test to tell Computers and Humans Apart. This test is designed to determine whether a user is a human or bot. The original or classic captchas required users to identify the correct sequence of distorted characters, type them into a form and submit to validate. The purpose was that bots would not be able to identify the characters and could, at best, input a random string of charaters making it satistically unlikely that they will pass the test. But now, with the advancement of Machine Learning, the bots can be programmed to identify these characters regardless of the distortion and so we had to come up with more complex tasks, which we did.</p>
+						<p>Google reCAPTCHA is a free service offered by Google so that we no longer have to depend on identifying blurred or distorted text. Instead, they introduced a different set of tests such as:</p>
+						<ol>
+							<li>Image Recognition
+								<p>This is one of the most common types of CAPTCHA used these days. Examples include, "select all images including a traffic light, bike, etc". Fairly straightforward but this can also be solved by bots programmed with image recognition, especially when the CAPTCHA calls for object identification in real images. It is made a little more complex by using blurry images which makes it difficult for the AI to successfully solve it.</p>
+							</li>
+							<li>The Checkbox
+								<p>This is an intereseting variation of the CAPTCHA where the user has to check a box beside an "i am not a robot" statement. The verification though, is not the actual clicking of the box but rather the path the cursor takes. This reCAPTCHA takes into account the movement of the user's cursor as it approaches the box because even the most direct motion by a human would have some amount of randomness that cannot be mimicked by a bot. But this is not all, this particular test might also inspect the user's stored cookies and/or their browsing history to completely remove the possibility of a user being a bot and if it is still unable to do so, then the user will be provided with another challenge, most likely identifying an object in a set of images. </p>
+							</li>
+							<li>Genereal User Behavior Assessment
+								<p>The latest version of the test involves taking a holistic look at a users history of interacting with content on the web as well as their browsing history. If the reCAPTCHA is unable to determine whether the user is human or not then an additional test may be provided to validate.</p>
+							</li>
+						</ol>
+						<p>So yes, CAPTCHAs or reCAPTCHAs do access browsing history to determine whether you are a human or a bot. Additionally, just like a real test, the latest version of reCAPTCHA scores you on a scale from 0.0 to 1.0 and the closer the score to 0.0, the more likely it is that the user is a bot. I found this information in a very infomative article on <a href="https://www.cloudflare.com/learning/bots/how-captchas-work/">Cloudflare</a>. Check it out as it has more details that have not been included here!</p>
+					</section>
+		
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://swchoubey.github.io" class="icon solid fa-globe"><span class="label">Twitter</span></a></li>
+								<li><a href="https://www.linkedin.com/in/swasti-choubey/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/swchoubey" class="icon brands fa-github"><span class="label">Github</span></a></li>
+								<li><a href="mailto:choubeyswasti@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Swasti Choubey</li></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

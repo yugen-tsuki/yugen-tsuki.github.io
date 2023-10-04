@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>ChatGPT</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<script src="https://kit.fontawesome.com/03f05a2142.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="icon" href="images/thumbs/moon.ico" type="image/x-icon">
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="#" class="image avatar"><img src="images/moon.png" alt="" /></a>
+					<h1><strong>Welcome to Yugen</strong>, a space I dedicate to<br />
+					learning new things.</h1>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2>Keeping up with ChatGPT</h2>
+						</header>
+						<p>By now everyone knows about ChatGPT and most of us have used it for something or the other. The term GPT stands for Generative Pre-trained Transformer and ChatGPT is trained on a vast amount of text data from the internet, allowing it to generate human-like text responses to a wide range of natural language inputs. The free version of ChatGPT is trained on data up to September 2021 but you can get more accurate and up to date responses with the paid version, GPT-4.</p>
+						<p>The reason that the title of this blog post is a dramatic rendition of "Analysing the current performance of ChatGPT, has it gone down, improved or is something not making sense?" is because of this image I came across:</p>
+						<span>
+						<img src="images/thumbs/gpt.jpg" height="250px" width="350px" style="float: left; padding: 3px 20px 3px 3px;"/>
+						I came across this image on Twitter (X) which made quite a few people wonder, "Umm, isn't ChatGPT supposed to be smart?" Valid but no matter how human it may seem, at the end of the day it is a transformer and once transformers start generating tokens, they have to continue with those. Thus, if it starts off on the wrong path (through unlucky sampling), it has to stay that course till it can eventually corrects itself. I retried the same prompt on both ChatGPT and Bard but I got the correct reponse in both cases.</span>
+						<p>Moving on, let us talk about the performance of the model. Researchers at UC Berkely and Stanford conducted an experiment to compare the performance of the March 2023 and June 2023 versions of GPT-3.5 and GPT-4. They tested performance on various tasks:</p>
+						<ol>
+							<li>Math Problems</li>
+							<li>Sensitive/Dangerous Questions</li>
+							<li>Opinion Surveys</li>
+							<li>Multi-hop Knowledge Intensive Questions</li>
+							<li>Generating Code</li>
+							<li>US Medical License Test</li>
+							<li>Visual Rasoning</li>
+						</ol>
+
+						<p> For example, GPT-4 (March 2023) was reasonable at identifying prime vs. composite numbers (84%
+							accuracy) but GPT-4 (June 2023) was poor on these same questions (51% accuracy). GPT-4 became less willing to answer
+							sensitive questions and opinion survey questions in June than in March. GPT-4 performed better
+							at multi-hop questions in June than in March, while GPT-3.5’s performance dropped on this task.
+							Both GPT-4 and GPT-3.5 had more formatting mistakes in code generation in June than in March. Based on their experiments, they concluded that the behavior of the same LLM can change substantially in a small amount of time and requires continuous monitoring. They also released their evaluation data and ChatGPT responses <a href="https://github.com/lchen001/LLMDrift">here</a>. You can also read their paper <a href="https://arxiv.org/pdf/2307.09009.pdf">here</a>.</p>
+					</section>
+		
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://swchoubey.github.io" class="icon solid fa-globe"><span class="label">Twitter</span></a></li>
+								<li><a href="https://www.linkedin.com/in/swasti-choubey/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/swchoubey" class="icon brands fa-github"><span class="label">Github</span></a></li>
+								<li><a href="mailto:choubeyswasti@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Swasti Choubey</li></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

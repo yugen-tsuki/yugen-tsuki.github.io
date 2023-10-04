@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Bogosort</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<script src="https://kit.fontawesome.com/03f05a2142.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="icon" href="images/thumbs/moon.ico" type="image/x-icon">
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="#" class="image avatar"><img src="images/moon.png" alt="" /></a>
+					<h1><strong>Welcome to Yugen</strong>, a space I dedicate to<br />
+					learning new things.</h1>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2>Bogosort</h2>
+						</header>
+						<p>I was mindlessly scrolling through Instagram when I came across one of those reels where an influencer goes around asking questions to students on campus. In this particular reel he was asking CS majors what their favorite sorting algorithm was and 8 out of 10 of them said Bogosort. I took major offense to that because I had never heard of this algorithm that everybody claimed was so incredibly efficient so I looked it up and well...the Internet won again.</p>
+                        <p>Bogosort is also known as stupid sort for a good reason. It is the most caveman approach to brute forcing a problem. In this algorithm, you check whether a data structure is sorted or not. If it is not sorted then you randomly shuffle the elements and check if the new, shuffled data structure is sorted and repeat this till you have successfully sorted it.</p>
+                        <p>The reason that Bogosort is even talked about is because people use it as an example of a bad algorithm. One might wonder that if it sounds so simple to implement, why is it a bad algorithm. Well that is where complexity figures in. Bogosort is a probabilistic algorithm so to understand its time complexity, let's go back basics of permutations. For a random data structure of n elements, the total possible number of permutations is n! which implies that Bogosort will take n! shuffles on average to sort said data structure. Each shuffle takes n operations so the total number of operations becomes n x n! on an average. Thus the Average Case Complexity is O(n x n!). We can't compute the worst case time complexity of this algorithm because its performance is completely dependent on probability.</p>
+                        <h3>Complexity Analysis of Bogosort</h3>
+                        <table>
+                            <tr>
+                                <th>Average Complexity</th>
+                                <td>O(nxn!)</td>
+                            </tr>
+                            <tr>
+                                <th>Best Case</th>
+                                <td>O(n)</td>
+                            </tr>
+                            <tr>
+                                <th>Worst Case</th>
+                                <td>&#8734</td>
+                            </tr>
+                            <tr>
+                                <th>Space Complexity</th>
+                                <td>O(1)</td>
+                            </tr>
+                        </table>
+                        <p>Here is an example implementation of the algorithm. I ran the code with the intention of sorting a random array of 20 elements and managed to complete a workout but I never got the sorted array. Anyway, here is the code:</p>
+                        <pre>
+                            <code>
+import java.util.*;
+
+public class Bogosort {
+    void bogosort(int[] x){
+        while(!isSorted(x))
+            shuffle(x);
+    }
+    boolean isSorted(int[] x){
+        for(int i=1;i&lt;x.length;i++){
+            if(x[i]&lt;x[i-1]){
+                return false;
+            }
+        }
+        return true;
+    }
+    void shuffle(int[] x){
+        Random random = new Random();
+        for(int i=0;i&lt;x.length;i++){
+            int j = random.nextInt(i+1);
+            swap(x,i,j);
+        }
+    }
+    void swap(int[] x, int y, int z){
+        int temp = x[y];
+        x[y] = x[z];
+        x[z] = temp;
+    }
+    public static void main(String[] args){
+
+        int[] arr={1,5,3,8,2,4,6,7,2,3,6,8,2,8,5,4,0,3,2,9};
+        Bogosort obj=new Bogosort();
+        obj.bogosort(arr);
+        for(int i : arr)
+            System.out.print(i + " ");
+    }
+}          
+                            </code>
+                        </pre>
+					</section>
+		
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://swchoubey.github.io" class="icon solid fa-globe"><span class="label">Twitter</span></a></li>
+								<li><a href="https://www.linkedin.com/in/swasti-choubey/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/swchoubey" class="icon brands fa-github"><span class="label">Github</span></a></li>
+								<li><a href="mailto:choubeyswasti@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Swasti Choubey</li></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
