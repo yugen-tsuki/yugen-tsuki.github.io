@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Bogosort-Related Algorithms</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<script src="https://kit.fontawesome.com/03f05a2142.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="icon" href="images/thumbs/moon.ico" type="image/x-icon">
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="#" class="image avatar"><img src="images/moon.png" alt="" /></a>
+					<h1><strong>Welcome to Yugen</strong>, a space I dedicate to<br />
+					learning new things.</h1>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2>The Weird Cousins of Bogosort</h2>
+						</header>
+						<p>I thought Bogosort was the most unnecessary algorithm. I was wrong. Here are some more weird algorithms that are related to the Bogosort:</p>
+                        <ol>
+                            <li>Bogobogosort
+                                <p>For Bogosort, we check if the list is sorted and if not then we perform a random shuffle and check again. Bogobogosort builds on that and specifies how to check if the list is sorted, using recursion of course.</p>
+                                <p>To be completely honest, I went through the algorithm and have no desire to perform an analysis but <a href="https://www.dangermouse.net/esoteric/bogobogosort.html">this</a> blog not only shares my sentiments but also provides a detailed analysis, so please refer to the same for more details.</p>
+                            </li>
+                            <li>Gorosort
+                                <p>Gorosort operates such that, while the list is not in order, it will randomly permute a subset of all the elements. This algorithm was actually designed for the following Google Code Jam problem:</p>
+                                <p>"Goro has 4 arms. Goro is very strong. You don't mess with Goro. Goro needs to sort an array of N different integers. Algorithms are not Goro's strength; strength is Goro's strength. Goro's plan is to use the fingers on two of his hands to hold down several elements of the array and hit the table with his third and fourth fists as hard as possible. This will make the unsecured elements of the array fly up into the air, get shuffled randomly, and fall back down into the empty array locations."</p>
+                            </li>
+                            <li>Bozosort
+                                <p>Another variation of random sort, Bozosort chooses two numbers in an array randomly, swaps them and checks if the resulting array is sorted. The average complexity is expected to be O(n!) but it is hard to calculate.</p>
+                            </li>
+                            <li>Worstsort
+                                <p>No, this is not that one sauce that no one can pronounce. Worstsort is a variation of badsort which will provably terminate in finite time but the term "finite" is used very loosely. Worstsort is parameterized by a function on natural numbers, and calls badsort with a recursion depth given by the function f applied to the length of the list. To understand how bad it is, lets take function f to be Ackermann's function. While a list of length 1 or 2 will be easily sorted, length 3 and beyond become completely hopeless. Therefore, to sort a list arbitrarily badly, one would execute worstsort(L, f) = badsort(L, f(length(L))), where length(L) is the number of elements in L. The resulting algorithm has complexity O((n!<sup>(f(n))</sup>)<sup>2</sup>) where n!<sup>(m)</sup> is the factorial of n iterated m times. Yikes.</p>
+                            </li>
+                            <li>Slowsort
+                                <p>One of the fundamental concepts of Computer Science is Divide and Conquer. Let me introduce you to Multiply and Surrender. Slowsort is from a hilarious paper titled "Pessimal Algorithm and Simplixity Analysis" which can be found <a href="https://www.mipmip.org/tidbits/pasa.pdf">here</a>. As for the implementation, let's assume we are sorting an array using Slowsort. We sort the first half , recursively and repeat the same for the second half. Next we find the maximum of the whole array by comparing the results obtained in the first two steps, and place the maximum at the end. Now we have to sort the entire array, minus the last element, recursively.</p>
+                            </li>
+                            <li>Quantum Bogosort
+                                <p>When I first came across the Quantum Bogosort, I had to double check and see if it was a formally recorded algorithm. The reason being how it works:</p>
+                                <ol>
+                                    <li>Generate a random permutation of input using a quantum source of entropy.</li>
+                                    <li>Check if list is sorted. If not sorted, destroy the universe.</li>
+                                </ol>
+                                <p>Simple, right? The complexity is just as easy to analyse. All you have to do is to assume that the many-worlds interpretation holds, and if so, the use of this algorithm would leave atleast one universe where the input is sorted in O(n) time.</p>
+                                <p>This is obviously a computer science inside joke. We have those.</p>
+                            </li>
+                            <li>Miracle Sort
+                                <p>This algorithm is straight from the Bible. It checks the array repeatedly till it is sorted until a miracle occurs. The order of the array is never shuffled and the hypothetical time complexity is O(&#8734) but the best case complexity is O(n) when the array is sorted.</p>
+                            </li>
+                        </ol>
+						
+					</section>
+		
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://swchoubey.github.io" class="icon solid fa-globe"><span class="label">Twitter</span></a></li>
+								<li><a href="https://www.linkedin.com/in/swasti-choubey/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/swchoubey" class="icon brands fa-github"><span class="label">Github</span></a></li>
+								<li><a href="mailto:choubeyswasti@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Swasti Choubey</li></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
