@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>AutoSync</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<script src="https://kit.fontawesome.com/03f05a2142.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="icon" href="images/thumbs/moon.ico" type="image/x-icon">
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="#" class="image avatar"><img src="images/moon.png" alt="" /></a>
+					<h1><strong>Welcome to Yugen</strong>, a space I dedicate to<br />
+					learning new things.</h1>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2>Automatic Synchronization of Clocks and Devices</h2>
+						</header>
+						<p>During November of 2021, my friends and I had gone out for a stroll at midnight because we wanted to witness Daylight Savings Time ending live and taking a walk was our best bet at staying up for it. Yes, we are all dorks. At that time I was more concerned about having fun and celebrating the "extra hour" to <em>clock</em> (hehe) how all our devices automatically synced to the correct time. While travelling to London, I noticed that my phone and watch had both synced to the local time which finally made me wonder about how this works. The relatively random thought had absolutely nothing to do with the fact that airports are essentially alternate universes.</p>
+                        <p>When we travel to different time zones or daylight savings time begins/ends, our devices adjust their time automatically using signals from GPS or internet time servers. This synchronization ensures that the time our devices our set to is accurate without the need for manual adjustments. Here are some more details about the synchronization process:</p>
+                        <ol>
+                            <li>Time Servers: Many devices, including computers, smartphones, and network-connected appliances, rely on time servers to maintain accurate time. Time servers are highly accurate and synchronized with atomic clocks, which are the most accurate timekeeping devices in the world.</li>
+                            <li>Network Time Protocol (NTP): The Network Time Protocol is the standard protocol used to synchronize time across computer networks. Many smartphones, including those running Android and iOS, rely on the Network Time Protocol (NTP) to keep their time accurate. NTP allows devices to connect to time servers on the internet to obtain precise time information.</li>
+                            <li>Carrier Network Time: Mobile phones can also obtain time information from the cellular network they are connected to. Cellular networks often receive time updates from global time servers and satellites. This helps ensure that your phone's time remains accurate, especially when you're traveling between time zones.</li>
+                            <li>GPS Time Synchronization: Many devices, especially in critical systems like air traffic control and financial trading platforms, rely on GPS (Global Positioning System) for time synchronization. GPS satellites carry highly accurate atomic clocks, and GPS receivers use signals from these satellites to determine the current time and location. GPS is accurate to within a few billionths of a second.
+                            When you travel to a different time zone, your phone may automatically detect the change in time zone based on your location using GPS data or by analyzing cell tower information. Once the phone determines the new time zone, it adjusts its internal clock to match the local time automatically.
+                            </li>
+                            <li>Stratum Levels: NTP servers are often categorized into stratum levels. A stratum 0 server is directly connected to a reference time source, like an atomic clock. Stratum 1 servers synchronize with stratum 0 servers, and the hierarchy continues down to stratum 15 (which represents an unsynchronized device). Devices aim to synchronize with the most accurate stratum servers available.</li>
+                            <li>Daylight Saving Time (DST) Adjustments: Many time servers are aware of daylight saving time rules and make automatic adjustments when DST begins or ends. This feature ensures that devices in regions that observe DST display the correct local time. When daylight saving time begins or ends, the local cellular network or the GPS signal will typically provide the phone with the updated time information. The phone then adjusts its internal clock to reflect the new time.</li>
+                            <li>Redundancy: To enhance reliability, devices may synchronize with multiple time servers. If one server becomes unavailable, the device can switch to an alternative source of accurate time.</li>
+                            <li>Timestamping: Accurate time synchronization is vital in applications such as financial trading, where timestamps on transactions are crucial. These timestamps allow for accurate order execution and auditing of financial transactions.</li>
+                            <li>Frequency Synchronization: In addition to time synchronization, some applications require precise frequency synchronization. Telecom networks, for example, use highly accurate frequency standards to ensure the stability and synchronization of network components.</li>
+                        </ol>
+						<p>Random airport musings and false hopes of extra hours aside, automatic synchronization of clocks and devices is crucial in various fields, including communication, transportation, financial services, and data centers. It ensures that time-sensitive processes and transactions occur accurately and reliably, and it helps maintain the integrity and efficiency of modern technologies and systems. Thank you for coming to my Ted Talk.</p>
+					</section>
+		
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://swchoubey.github.io" class="icon solid fa-globe"><span class="label">Twitter</span></a></li>
+								<li><a href="https://www.linkedin.com/in/swasti-choubey/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/swchoubey" class="icon brands fa-github"><span class="label">Github</span></a></li>
+								<li><a href="mailto:choubeyswasti@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Swasti Choubey</li></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
