@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>More Weird Algorithms</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<script src="https://kit.fontawesome.com/03f05a2142.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="icon" href="images/thumbs/moon.ico" type="image/x-icon">
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="#" class="image avatar"><img src="images/moon.png" alt="" /></a>
+					<h1><strong>Welcome to Yugen</strong>, a space I dedicate to<br />
+					learning new things.</h1>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2>Welcome to the Party, Pal</h2>
+						</header>
+						<p>Here are some other weird algorithms, just a disclaimer though, all of these can be found on r/ProgrammerHumor:</p>
+                        <ol>
+                            <li>Schrödinger's Sorting Algorithm
+                                <p>We are all familiar with Schrödinger's cat, a thought expeiment which involves a hypothetical scenario where a cat is placed in a box with a mechanism that has an equal chance of killing the cat or not, and until the box is opened and observed, the cat is considered both alive and dead simultaneously, in a superposition of states, according to quantum mechanics.</p>
+                                <p>On the same note,  Schrödinger's Sorting Algorithm suggests a sorting algorithm where items are both sorted and unsorted at the same time until observed. It is of course, a joke. An alternate way to comprehend it would be as follows: encrypt the list and until it is decrypted, it will be assumed to be both sorted and unsorted.</p>
+                                <p>It is a whimsical algorithm but if it were to be expressed as a pseudocode, it may look something like this:</p>
+                                <pre>
+                                <code>
+function schrodingerSort(arr):
+    sorted = checkIfSorted(arr)  // A function that checks if the array is sorted
+    if sorted is true:
+        return arr  // If already sorted, return the array
+    else:
+        observe(arr)  // Observe the array to see if it becomes sorted
+        return arr
+
+function observe(arr):
+    // A magical function that might sort the array or might not, the result is uncertain until observed
+    // This function doesn't actually exist and would be a placeholder for the random/satirical behavior of the Schrodinger Sort.
+    // It reflects the uncertain nature of the sorting process.
+
+function checkIfSorted(arr):
+    for i from 0 to length of arr - 2:
+        if arr[i] > arr[i + 1]:
+            return false  // Array is not sorted
+
+    return true  // Array is sorted
+
+                                </code>
+                            </pre>
+                            </li>
+                            <li>Intelligent Design Sort
+                                <p>The term "Intelligent Design" (ID) is often associated with the debate about the origins of life and the universe. Please bear this in mind as I describe what this algorithm proposes.</p>
+                                <p>For a list of size 'n', the probability of it being in the order that it is is 1/n!. For example:</p>
+                                <pre>
+                                    <code>
+list = {2,3,5,6,1}
+Here, n = 5 and there are 120 other possible orders this list could be in which implies that the probability that the list appears as it is 1/120.
+                                    </code>
+                                </pre>
+                                <p>At a much grander scale than n=5, the probility becomes so small that , the algorithm posits, it must have been put in this order by an "Intelligent Sorter". The algorithm further states that since this order has been decreed by a "higher power", therefore it must already be optimally sorted in a way that transcends our "mortal" understanding. Additionally, altering the order to fit our definition of sorted would only make it less sorted. Obviously, the algorithm performs in constant time and occupies no additional memory at all which indeed makes it divine.</p>
+                            </li>
+                            <li>Sleep Sort
+                                <p>The sleep sort algorithm uses time delays based on the values of elements in an array to sort them. While it's an interesting concept, it's not an efficient or practical sorting algorithm.</p>
+                                <p>The idea behind the sleep sort is to utilize the sleep function or a similar time-delay mechanism available in programming languages to sort an array by delaying the output based on the value of each element. Elements in the array are used to determine the duration of the delay before they are printed or appended to a new list.</p>
+                                <p>Let's take a look at the psudocode to understand it a bit better:</p>
+                                <pre>
+                                    <code>
+sleepSort(array)
+    for each element in the array
+        create a new thread or process for each element inside each thread/process, sleep for an amount of time based on the value of the element
+        after the sleep, output/print the element                                  
+                                    </code>
+                                </pre>
+                                <p>This code creates a thread for each element in the array. Each thread sleeps for an amount of time proportional to the value of the element and then prints the element. This results in the elements being printed in ascending order based on their values due to the delay introduced by the sleep function. While it makes sense, sleep sort isn't really used in the real world because its performance is heavily contingent on the value of the elements and it can be very slow or impractical for large arrays or arrays with larger values. To know more about this algorithm, please check out<a href="https://rosettacode.org/wiki/Sorting_algorithms/Sleep_sort"> this</a> article.</p>
+                            </li>
+                        </ol>
+						
+					</section>
+		
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://swchoubey.github.io" class="icon solid fa-globe"><span class="label">Twitter</span></a></li>
+								<li><a href="https://www.linkedin.com/in/swasti-choubey/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/swchoubey" class="icon brands fa-github"><span class="label">Github</span></a></li>
+								<li><a href="mailto:choubeyswasti@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Swasti Choubey</li></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
