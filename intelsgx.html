@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Intel SGX</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<script src="https://kit.fontawesome.com/03f05a2142.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="icon" href="images/thumbs/moon.ico" type="image/x-icon">
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="#" class="image avatar"><img src="images/moon.png" alt="" /></a>
+					<h1><strong>Welcome to Yugen</strong>, a space I dedicate to<br />
+					learning new things.</h1>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2>Intel SGX: The CPU Based Defense System</h2>
+						</header>
+						<p>According to Intel, its Software Guard Extensions (Intel SGX), allows user-level code to allocate private
+                            regions of memory, called enclaves, which are designed to be protected from processes running at higher
+                            privilege levels. What stands out to me is that SGX is a CPU-based defense system and since it allows
+                            applications to run in private memory space, overall system vulnerability is reduced. CPU instructions are
+                            used to increase access control which prevents data modification, deletion and disclosure and thereby
+                            enhances code security. When an application is run inside an enclave, the CPU instantly encrypts it and
+                            stores the key and since the key is inside the CPU, it cannot be obtained by inspecting system memory.
+                            Spectre is an Intel processor vulnerability but even that did not seem to affect the SGX enclaves as the
+                            enclave security was designed in a way that prevented even operating systems from accessing the data in
+                            these enclaves.</p>
+                            <p>
+                            Till now, Intel SGX seemed impenetrable but this is where SGXPECTRE comes in. This attack exploits
+                            the race condition between the injected, speculatively executed memory references which then leads to
+                            side-channel observable cache traces and latency of branch resolution.</p>
+                            <p>
+                            ÆPIC Leak is an architectural flaw which also enables attacks against SGX enclaves and forces specific
+                            data into caches leading to leaked targeted secrets. The Advanced Programmable Interrupt Controller
+                            (APIC) mechanism manages and routes interrupts but there exists a bug, an uninitialized memory read,
+                            which happens when memory space is not cleared after the CPU is done processing it, causing the leak of
+                            old data that is no longer needed.</p>
+                            <p>I found this interesting <a href="https://community.intel.com/t5/Intel-Software-Guard-Extensions/Meltdown-Spectre-impact-on-SGX/td-p/1180482">thread</a> where Dan O'Keeffe from the LSDS group at Imperial College London
+                            shared a <a href="https://github.com/lsds/spectre-attack-sgx">proof-of-concept</a> Spectre-like attack on Intel SGX enclaves in the Intel community forum and an
+                            expert from Intel reviewed it and made several detailed observations. Another interesting <a href="https://beincrypto.com/privacy-focused-secret-network-vulnerability-discovered-security-researchers/">article</a> I came
+                            across was about the Secret Network which is a protocol that focuses heavily on private transactions. A
+                            group of security researchers were examining the network for ÆPIC Leak vulnerabilities and ended up
+                            finding the master decryption key for the entire network.The vulnerability was related to Intel’s Software
+                            Guard Extensions.</p><p>
+                            On a concluding note, it may seem that the Intel SGX is not as impenetrable as we originally thought but
+                            there are still some incredible applications of this technology. Intel, R3 and Hope for Justice are
+                            collaborating to build an application that enables organizations combating modern slavery to confidently
+                            share sensitive data related to individual cases. This Data Exchange application takes advantage of the
+                            Intel® Software Guard Extensions because it enables multiple organizations to collaborate on shared
+                            analysis and validate algorithms while shielding confidential or regulated data from other parties. More
+                            details about this collaboration can be found in this <a href="https://finance.yahoo.com/news/intel-solutions-help-combat-modern-140000013.html?guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAAHF-nu9x7Ek1R4LVsl9tSMIPb7XBnrHMpydFVjxA0ArjTtoU4sWi53T7GaUcW4OVVqNdF9RA-FkXiXfG7KdHZFEDvBTVkKhu-DCwGQ5DJMzQM_uJ9uRpekeXezd96mf0moK3T4YQcSIIPX_ws6B0uDdM7rYTCGiemt9bEGcA_atc&guccounter=2">article</a>.</p>
+					</section>
+		
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://swchoubey.github.io" class="icon solid fa-globe"><span class="label">Twitter</span></a></li>
+								<li><a href="https://www.linkedin.com/in/swasti-choubey/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/swchoubey" class="icon brands fa-github"><span class="label">Github</span></a></li>
+								<li><a href="mailto:choubeyswasti@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Swasti Choubey</li></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
