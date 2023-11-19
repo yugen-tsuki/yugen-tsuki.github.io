@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Lava Lamp Encryption</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<script src="https://kit.fontawesome.com/03f05a2142.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="icon" href="images/thumbs/moon.ico" type="image/x-icon">
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="#" class="image avatar"><img src="images/moon.png" alt="" /></a>
+					<h1><strong>Welcome to Yugen</strong>, a space I dedicate to<br />
+					learning new things.</h1>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2>How Lava Lamps Help With Internet Encryption</h2>
+						</header>
+						<p>Encryption is the process of encoding information in such a way that only authorized parties can access and understand it. It involves transforming plaintext (readable data) into ciphertext (encoded data) using an algorithm and a key. The encrypted data can only be decrypted back into its original form using the corresponding decryption key.</p>
+						<p>Encryption on the internet refers to the process of encoding information transmitted between devices or servers to ensure that it remains secure and private during transmission. It's a fundamental component of online security and is used to protect sensitive data from being intercepted, read, or altered by unauthorized parties.</p>
+						<p>TL;DR: Encryption is important and a key is needed for both encryption and decryption.</p>
+						<p>The key is a critical component that's used to control the encryption and decryption processes. It's essentially a piece of information—a string of bits, characters, or a mathematical value—that's input into an encryption algorithm to transform plaintext into ciphertext and vice versa.</p>
+						<p>Each new key used by a computer to encrypt the data must be random. Randomness is crucial in encryption for several reasons:</p>
+						<ol>
+							<li>Security: Randomness adds complexity to encryption, making it harder for unauthorized parties to predict or guess the encrypted data or the encryption keys. Predictable patterns or algorithms can make encryption vulnerable to attacks, such as brute-force attempts to guess the key.</li>
+							<li>Avoiding Patterns: If encryption lacks randomness, it might introduce patterns in the encrypted output, which attackers can exploit to break the encryption. A lack of randomness might lead to repetitive encryption patterns that could reveal information about the plaintext.</li>
+							<li>Enhancing Key Strength: Randomness contributes to the strength of encryption keys. Stronger keys, especially those generated using a high degree of randomness, are harder to crack, ensuring better security for encrypted data.</li>
+							<li>Resisting Cryptanalysis: Cryptanalysis is the study of cryptographic systems with the goal of finding weaknesses that could be exploited to retrieve the plaintext from the ciphertext. Randomness helps in resisting various cryptanalysis techniques by making the encryption process less predictable and more resistant to these attacks.</li>
+						</ol>
+						<p>Randomness, therefore, plays a crucial role in encryption by fortifying the security of the encrypted data, making it harder for unauthorized entities to decipher the information without the proper decryption key.</p>
+						<p>Don't worry, I didn't clickbait you using lava lamps. Let's get into how lava lamps are the backbone of internet encryption. The problem with computers is that they run on logic. For example, here is a pseudocode of the Math.random() function of Java:</p>
+						<pre>
+							<code>
+function MathRandom()
+	seed = current time in milliseconds // Initial seed based on time
+							
+	function nextRandom()
+		seed = (seed * 25214903917 + 11) modulo (2^48)
+		return seed / (2^48) // Convert the result to a floating-point number between 0 and 1
+							
+	return nextRandom
+							
+							</code>
+						</pre>
+						<p>Thus, even the random number generators in computers are rather predictable and while the usability of computers is primarily dependent on their predictability, this very feature becomes a liability when we need to generate secure encryption keys.</p>
+						<p>To produce unpredictable data, a computer must have a source of random data and the real world is a great "random data generator". Finally we come to lava lamps. Phew. Please enjoy this giant lava lamp in commemoration of this achievement.</p>
+						<div class="image fit article"><img src="images/lavalamp.jpg"/></div>
+						<p>Lava lamps are constantly random as the "lava" never takes the same shape twice and observing a group of lava lamps is a great source of random data. Cloudflare did exactly.</p>
+						<div class="image fit article"><img src="images/tiles/lava-lamps.jpg"/></div>
+						<p>Cloudflare arranged 100 lamps on a wall and mounted a camera pointed to the wall. Besides being aesthetically on point, the wall is able to offer extremely strong (and sufficiently random) SSL/TLS encryption to its customers. </p>
+						<blockquote cite="https://www.cloudflare.com/learning/ssl/lava-lamp-encryption/">The camera takes photos of the lamps at regular intervals and sends the images to Cloudflare servers. All digital images are really stored by computers as a series of numbers, with each pixel having its own numerical value, and so each image becomes a string of totally random numbers that the Cloudflare servers can then use as a starting point for creating secure encryption keys.</blockquote>
+						<p>This is a direct quote from a very interesting article by Cloudflare on Lava Lamp Encryption which you can find <a href="https://www.cloudflare.com/learning/ssl/lava-lamp-encryption/">here</a>. They also talk about an earlier version of the lava lamp encryption method introduced by a company called Silicon Graphics. It is definitely worth a read.</p>
+					</section>
+		
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://swchoubey.github.io" class="icon solid fa-globe"><span class="label">Twitter</span></a></li>
+								<li><a href="https://www.linkedin.com/in/swasti-choubey/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/swchoubey" class="icon brands fa-github"><span class="label">Github</span></a></li>
+								<li><a href="mailto:choubeyswasti@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Swasti Choubey</li></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

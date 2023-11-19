@@ -2063,6 +2063,9 @@ input, select, textarea {
 		.image.thumb {
 			text-align: center;
 		}
+		.image.article {
+			text-align: center;
+		}
 
 			.image.thumb:after {
 				-moz-transition: opacity 0.2s ease-in-out;
